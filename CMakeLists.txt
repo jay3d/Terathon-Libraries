@@ -1,10 +1,36 @@
 cmake_minimum_required(VERSION 3.30)
 
-project(terathon VERSION 1.0)
-
 set(TerathonContainers_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Terathon-Container-Library")
 set(TerathonMath_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Terathon-Math-Library")
 set(OpenDDL_SOURCE_DIR "${CMAKE_SOURCE_DIR}/OpenDDL")
+
+find_package(Git REQUIRED)
+
+if (NOT EXISTS ${TerathonContainers_SOURCE_DIR}/LICENSE)
+    execute_process(COMMAND ${GIT_EXECUTABLE}
+            submodule update --init --recursive
+            -- ${TerathonContainers_SOURCE_DIR}
+            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            COMMAND_ERROR_IS_FATAL ANY)
+endif ()
+
+if (NOT EXISTS ${TerathonMath_SOURCE_DIR}/LICENSE)
+    execute_process(COMMAND ${GIT_EXECUTABLE}
+            submodule update --init --recursive
+            -- ${TerathonMath_SOURCE_DIR}
+            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            COMMAND_ERROR_IS_FATAL ANY)
+endif ()
+
+if (NOT EXISTS ${OpenDDL_SOURCE_DIR}/LICENSE)
+    execute_process(COMMAND ${GIT_EXECUTABLE}
+            submodule update --init --recursive
+            -- ${OpenDDL_SOURCE_DIR}
+            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            COMMAND_ERROR_IS_FATAL ANY)
+endif ()
+
+project(terathon VERSION 1.0)
 
 set(HEADERS
         "${TerathonContainers_SOURCE_DIR}/TSArray.h"
