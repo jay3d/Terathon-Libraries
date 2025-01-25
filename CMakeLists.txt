@@ -4,32 +4,6 @@ set(TerathonContainers_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Terathon-Container-Librar
 set(TerathonMath_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Terathon-Math-Library")
 set(OpenDDL_SOURCE_DIR "${CMAKE_SOURCE_DIR}/OpenDDL")
 
-find_package(Git REQUIRED)
-
-if (NOT EXISTS ${TerathonContainers_SOURCE_DIR}/LICENSE)
-    execute_process(COMMAND ${GIT_EXECUTABLE}
-            submodule update --init --recursive
-            -- ${TerathonContainers_SOURCE_DIR}
-            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-            COMMAND_ERROR_IS_FATAL ANY)
-endif ()
-
-if (NOT EXISTS ${TerathonMath_SOURCE_DIR}/LICENSE)
-    execute_process(COMMAND ${GIT_EXECUTABLE}
-            submodule update --init --recursive
-            -- ${TerathonMath_SOURCE_DIR}
-            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-            COMMAND_ERROR_IS_FATAL ANY)
-endif ()
-
-if (NOT EXISTS ${OpenDDL_SOURCE_DIR}/LICENSE)
-    execute_process(COMMAND ${GIT_EXECUTABLE}
-            submodule update --init --recursive
-            -- ${OpenDDL_SOURCE_DIR}
-            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-            COMMAND_ERROR_IS_FATAL ANY)
-endif ()
-
 project(terathon VERSION 1.0)
 
 set(HEADERS
