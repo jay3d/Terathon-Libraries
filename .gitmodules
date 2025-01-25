@@ -1,0 +1,9 @@
+[submodule "Terathon-Container-Library"]
+	path = Terathon-Container-Library
+	url = https://github.com/EricLengyel/Terathon-Container-Library.git
+[submodule "Terathon-Math-Library"]
+	path = Terathon-Math-Library
+	url = https://github.com/EricLengyel/Terathon-Math-Library.git
+[submodule "OpenDDL"]
+	path = OpenDDL
+	url = https://github.com/EricLengyel/OpenDDL.git
