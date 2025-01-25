@@ -88,10 +88,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         PUBLIC_HEADER "${HEADERS}"
 )
 
-# Define the namespace
 set(PROJECT_NAMESPACE ${PROJECT_NAME}::)
 
-# Create an alias target in the namespace
 add_library(${PROJECT_NAMESPACE}${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 include(GNUInstallDirs)
