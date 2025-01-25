@@ -34,16 +34,16 @@ set(HEADERS
         "${TerathonMath_SOURCE_DIR}/TSVector3D.h"
         "${TerathonMath_SOURCE_DIR}/TSVector4D.h"
 
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSBivector4D.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSColor.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSData.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSHalf.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSMotor4D.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSOpenDDL.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSString.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSText.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTools.h"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTrivector4D.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSBivector4D.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSColor.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSData.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSHalf.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSMotor4D.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSOpenDDL.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSString.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSText.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTools.h"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTrivector4D.h"
 )
 
 set(SOURCES
@@ -70,16 +70,16 @@ set(SOURCES
         "${TerathonMath_SOURCE_DIR}/TSVector3D.cpp"
         "${TerathonMath_SOURCE_DIR}/TSVector4D.cpp"
 
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSBivector4D.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSColor.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSData.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSHalf.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSMotor4D.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSOpenDDL.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSString.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSText.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTools.cpp"
-        "${TerathonOpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTrivector4D.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSBivector4D.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSColor.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSData.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSHalf.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSMotor4D.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSOpenDDL.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSString.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSText.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTools.cpp"
+        "${OpenDDL_SOURCE_DIR}/OpenDDL/Code/TSTrivector4D.cpp"
 )
 
 add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES})
