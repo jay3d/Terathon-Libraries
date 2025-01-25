@@ -10,7 +10,7 @@ if (NOT EXISTS ${TerathonContainers_SOURCE_DIR}/LICENSE)
     execute_process(COMMAND ${GIT_EXECUTABLE}
             submodule update --init --recursive
             -- ${TerathonContainers_SOURCE_DIR}
-            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
             COMMAND_ERROR_IS_FATAL ANY)
 endif ()
 
@@ -18,7 +18,7 @@ if (NOT EXISTS ${TerathonMath_SOURCE_DIR}/LICENSE)
     execute_process(COMMAND ${GIT_EXECUTABLE}
             submodule update --init --recursive
             -- ${TerathonMath_SOURCE_DIR}
-            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
             COMMAND_ERROR_IS_FATAL ANY)
 endif ()
 
@@ -26,7 +26,7 @@ if (NOT EXISTS ${OpenDDL_SOURCE_DIR}/LICENSE)
     execute_process(COMMAND ${GIT_EXECUTABLE}
             submodule update --init --recursive
             -- ${OpenDDL_SOURCE_DIR}
-            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
             COMMAND_ERROR_IS_FATAL ANY)
 endif ()
 
